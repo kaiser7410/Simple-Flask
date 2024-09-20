@@ -1,0 +1,27 @@
+<nav class="flex items-center justify-between my-2">
+  <ul class="flex gap-4">
+    <li>
+      <a href="/" class="hover:underline">文章列表</a>
+    </li>
+    <li>
+      <a href="/posts/new" class="hover:underline">新增文章</a>
+    </li>
+  </ul>
+  <ul class="flex gap-4">
+    {% if current_user.is_authenticated %}
+    <li>{{ current_user }}</li>
+    <li>
+      <form action="{{ url_for('user.logout') }}" method="post">
+        <button class="hover:underline">登出</button>
+      </form>
+    </li>
+    {% else %}
+    <li>
+      <a href="{{ url_for('user.new') }}" class="hover:underline">註冊</a>
+    </li>
+    <li>
+      <a href="{{ url_for('user.login') }}" class="hover:underline">登入</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>

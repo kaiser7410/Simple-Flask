@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "simple-flask-blog"
+version = "0.1.0"
+description = ""
+authors = ["CHENCHENGKAI <kevin52078955@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+flask-sqlalchemy = "^3.1.1"
+flask-migrate = "^4.0.7"
+python-dotenv = "^1.0.1"
+flask-wtf = "^1.2.1"
+flask-bcrypt = "^1.0.1"
+flask-login = "^0.6.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
